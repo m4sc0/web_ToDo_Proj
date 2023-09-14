@@ -1,38 +1,63 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    background-color: #2D2D2D;
+  width: 100%;
+  background-color: #2d2d2d;
 }
 
 .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-    text-align: center;
-    padding: 2rem;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
 }
 
 .tasks {
-    width: 70%;
-    background-color: #434343;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 20px;
+  width: 70%;
+  background-color: #434343;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
 }
 .task {
-    width: 100%;
-    background-color: #EFD4D4;
+  width: 100%;
+  background-color: #848484;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: 200ms;
+}
+.task:hover {
+    background-color: #b6b6b6;
+    cursor: pointer;
+}
+.task-done {
+    background-color: #5d5d5d !important;
+}
+.task-done:hover {
+    background-color: #696969 !important;
+}
+.task-done h2 {
+    text-decoration: underline wavy;
+    text-decoration-color: #ff6060;
+}
+.task-done p {
+    text-decoration: underline wavy;
+    text-decoration-color: #ff6060;
 }
