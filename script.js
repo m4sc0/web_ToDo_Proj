@@ -18,6 +18,14 @@ const taskTemplate = (taskTitle, counter) => [
     `</div>`
 ].join('')
 
+const reorderTaskCounters = () => {
+    const tasks = content.querySelectorAll('.task');
+    tasks.forEach((task, index) => {
+        const counter = task.querySelector('.task-counter');
+        counter.textContent = index + 1;
+    });
+}
+
 addBtn.addEventListener('click', () => {
     if (taskInput.value !== '') {
         const appendTask = (message) => {
@@ -30,6 +38,7 @@ addBtn.addEventListener('click', () => {
 
         task.addEventListener('click', () => {
             task.parentNode.removeChild(task);
+            reorderTaskCounters();
         })
 
         content.append(task);
